@@ -142,4 +142,64 @@ header .localisation span::before {
 }
 
 /*** section restaurants ***/
-/*** Footer ***//*# sourceMappingURL=style.css.map */
+.section-restaurants {
+  display: flex;
+  flex-direction: column;
+}
+.section-restaurants .restaurants-contents {
+  display: flex;
+  flex-direction: column;
+}
+.section-restaurants .restaurants-contents .card {
+  width: 340px;
+}
+.section-restaurants .restaurants-contents .card img {
+  width: 20px;
+}
+
+/*** Footer ***/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px 22px 25px;
+}
+footer h3 {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  margin: 0;
+}
+footer ul {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto-light";
+  padding: 0;
+  gap: 8px;
+}
+footer ul li {
+  list-style-type: none;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer ul .ico-ustensils {
+  font-family: "Roboto";
+}
+footer ul .ico-ustensils::before {
+  font-family: "Font-awesome-solid";
+  content: "\f2e7";
+  padding-right: 10px;
+  font-size: 15px;
+}
+footer ul .ico-handshake-angle {
+  font-family: "Roboto";
+}
+footer ul .ico-handshake-angle::before {
+  font-family: "Font-awesome-solid";
+  content: "\f4c4";
+  padding-right: 10px;
+  font-size: 11px;
+}/*# sourceMappingURL=style.css.map */

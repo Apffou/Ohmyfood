@@ -172,5 +172,67 @@ header {
 
 /*** section restaurants ***/
 
+.section-restaurants{
+    display: flex;
+    flex-direction: column;
+    .restaurants-contents{
+        display: flex;
+        flex-direction: column;
+        .card{
+            width: 340px;
+            img{
+                width: 20px;
+            }
+        }
+    }
+
+}
 
 /*** Footer ***/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: $fourth-color;
+    color: white;
+    padding: 22px 25px 22px 25px;
+    h3{
+        color: white;
+        font-family: 'Shrikhand', cursive;
+        font-size: 18px;
+        margin: 0;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        font-family: 'Roboto-light';
+        padding: 0;
+        gap: 8px;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        .ico-ustensils{
+            font-family: 'Roboto';
+        }
+        .ico-ustensils::before{
+            font-family: 'Font-awesome-solid';
+            content: "\f2e7";
+            padding-right: 10px;
+            font-size: 15px;
+        }
+        .ico-handshake-angle{
+            font-family: 'Roboto';
+        }
+        .ico-handshake-angle::before{
+            font-family: 'Font-awesome-solid';
+            content: "\f4c4";
+            padding-right: 10px;
+            font-size: 11px;
+        }
+    }
+
+}
