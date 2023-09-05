@@ -83,7 +83,7 @@ header {
         width: 100%;
         background-color: #eaeaea;
         height: 50px;
-        color: $fourth-color;
+        color: $black-grey;
         font-family: 'Roboto';
         span::before{
             font-family: 'Font-awesome-solid';
@@ -143,31 +143,70 @@ header {
             font-family: 'Roboto';
             padding: 28px  0 28px 34px ;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
-            .ico-mobile::before{
+
+/********         Icones circles   *******/
+            &::before{
+                display: inline-block;
+                position: absolute;
+                content: "1";
+                background-color: $first-color;
+                color: white;
+                line-height: 24px;
+                font-size: 15px;
+                border-radius: 50%;
+                width: 24px;
+                text-align: center;
+                left: -12px;
+            }
+
+            &:nth-child(2)::before{
+                content: "2";
+            }
+            &:nth-child(3)::before{
+                content: "3";
+            }
+
+/********         Icones fonctionnement     *******/
+            .ico::before{
                 font-family: 'Font-awesome-solid';
+                padding-right: 20px;
+                color: $medium-grey;
+            }
+            .mobile::before{
                 content: "\f3cd";
                 font-size: 20px;
-                padding-right: 20px;
-                color: #7e7e7e;
             }
-            .ico-menu::before{
-                font-family: 'Font-awesome-solid';
+            .menu::before{
                 content: "\f0ca";
                 font-size: 15px;
-                padding-right: 20px;
-                color: #7e7e7e;
             }
-            .ico-store::before{
-                font-family: 'Font-awesome-solid';
+            .store::before{
                 content: "\f54e";
                 color: $first-color;
                 font-size: 17px;
-                padding-right: 20px;
+
             }
         }
     }
 }
 
+
+/** 
+
+position: absolute;
+    content: "2";
+    color: white;
+    background-color: violet;
+     display: inline-block; 
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    left: -12px;
+    line-height: 24px;
+    font-size: 20px;
+    text-align: center;
+
+***/
 
 
 /*** section restaurants ***/
@@ -178,10 +217,11 @@ header {
     .restaurants-contents{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         .card{
-            width: 340px;
+            width: 95%;
             img{
-                width: 20px;
+                width: 340px;
             }
         }
     }
@@ -193,7 +233,7 @@ header {
 footer{
     display: flex;
     flex-direction: column;
-    background-color: $fourth-color;
+    background-color: $black-grey;
     color: white;
     padding: 22px 25px 22px 25px;
     h3{
