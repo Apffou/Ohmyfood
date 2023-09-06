@@ -10,8 +10,8 @@
 
 @font-face {
     font-family: 'Roboto-light';
-    src: 
-    url(../assets/fonts/Roboto/Roboto-Light.ttf) format('truetype');
+    src:
+        url(../assets/fonts/Roboto/Roboto-Light.ttf) format('truetype');
 }
 
 @font-face {
@@ -29,18 +29,23 @@
 @font-face {
     font-family: 'Font-awesome-solid';
     src: url(../assets/fonts/fontawesome/fa-solid-900.woff2) format('woff2'),
-    url(../assets/fonts/fontawesome/fa-solid-900.ttf) format('truetype');
+        url(../assets/fonts/fontawesome/fa-solid-900.ttf) format('truetype');
 }
 
 /*** mixin ***/
 
-@mixin btn-cta{
-    border-radius: 25px ;
+@mixin btn-cta {
+    border-radius: 25px;
     padding: 15px 19px;
     font-family: 'Roboto';
     color: white;
     text-decoration: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+}
+
+@mixin cards {
+    background-color: white;
+    border-radius: 15px 15px 0 0;
 }
 
 
@@ -52,7 +57,7 @@ body {
     background-color: $background-color;
 }
 
-h2{
+h2 {
     font-family: 'Roboto-bold';
     padding-left: 18px;
 }
@@ -64,6 +69,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .logo {
         width: 100%;
         height: 63px;
@@ -71,12 +77,14 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+
+        img {
             width: 162px;
             height: auto;
         }
     }
-    .localisation{
+
+    .localisation {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -85,7 +93,8 @@ header {
         height: 50px;
         color: $black-grey;
         font-family: 'Roboto';
-        span::before{
+
+        span::before {
             font-family: 'Font-awesome-solid';
             content: "\f3c5";
             padding-right: 17px;
@@ -95,26 +104,29 @@ header {
 
 /*** section presentation ***/
 
-.section-presentation{
+.section-presentation {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1{
+
+    h1 {
         font-family: 'Roboto-bold';
         text-align: center;
         margin: 40px 0px 0px 0px;
     }
-    p{
+
+    p {
         font-family: 'Roboto-light';
         font-size: 18px;
         text-align: center;
         margin-top: 21px;
 
     }
+
     a {
         display: inline-block;
-        background: linear-gradient($second-color, $first-color) ;
+        background: linear-gradient($second-color, $first-color);
         @include btn-cta;
         margin: 31px 0px 57px 0px;
     }
@@ -123,29 +135,29 @@ header {
 
 
 
-/*** section functioning ***/
+/*******        section functioning    ********/
 
 .section-fonctionning {
     background-color: white;
     display: flex;
     flex-direction: column;
 
-    .cards-fonctionning-content{
+    .cards-fonctionning-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 25px;
 
-        .cards-fonctionning{
+        .cards-fonctionning {
             width: 75%;
             background-color: $background-color;
             border-radius: 20px;
             font-family: 'Roboto';
-            padding: 28px  0 28px 34px ;
+            padding: 28px 0 28px 34px;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
 
-/********         Icones circles   *******/
-            &::before{
+            /********         Icones circles   *******/
+            &::before {
                 display: inline-block;
                 position: absolute;
                 content: "1";
@@ -159,28 +171,32 @@ header {
                 left: -12px;
             }
 
-            &:nth-child(2)::before{
+            &:nth-child(2)::before {
                 content: "2";
             }
-            &:nth-child(3)::before{
+
+            &:nth-child(3)::before {
                 content: "3";
             }
 
-/********         Icones fonctionnement     *******/
-            .ico::before{
+            /********         Icones fonctionnement     *******/
+            .ico::before {
                 font-family: 'Font-awesome-solid';
                 padding-right: 20px;
                 color: $medium-grey;
             }
-            .mobile::before{
+
+            .mobile::before {
                 content: "\f3cd";
                 font-size: 20px;
             }
-            .menu::before{
+
+            .menu::before {
                 content: "\f0ca";
                 font-size: 15px;
             }
-            .store::before{
+
+            .store::before {
                 content: "\f54e";
                 color: $first-color;
                 font-size: 17px;
@@ -191,83 +207,121 @@ header {
 }
 
 
-/** 
-
-position: absolute;
-    content: "2";
-    color: white;
-    background-color: violet;
-     display: inline-block; 
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    left: -12px;
-    line-height: 24px;
-    font-size: 20px;
-    text-align: center;
-
-***/
 
 
 /*** section restaurants ***/
 
-.section-restaurants{
+.section-restaurants {
     display: flex;
     flex-direction: column;
-    .restaurants-contents{
+
+    .restaurants-contents {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        .card{
-            width: 95%;
-            img{
-                width: 340px;
+        padding: 0 18px 0 18px;
+
+        .card {
+            width: 100%;
+            @include cards;
+
+            .card-first-section{
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+
+                img{
+                    width: 100%;
+                    border-radius: 15px 15px 0 0;
+                }
+
+                .label{
+                    width: 80px;
+                    height: 29px;
+                    background-color: $green-light;
+                    color: $color-label-font;
+                    border-radius: 2px;
+                    font-family: 'Roboto';
+                    line-height: 29px;
+                    text-align: center;
+                    position: absolute;
+                    top: 13px;
+                    right: 12px;
+                }
             }
+
+            .card-second-section{
+                display: flex;
+                flex-direction: row;
+                text-decoration: none;
+                color: $black;
+
+                h3{
+                    font-family: 'Roboto-bold';
+                    margin: 16px 0 8px 0;
+                }
+
+                p{
+                    font-family: 'Roboto-light';
+                    font-size: 17px;
+                    margin-top: 0;
+                }
+            }
+
         }
     }
 
 }
 
+
 /*** Footer ***/
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     background-color: $black-grey;
     color: white;
     padding: 22px 25px 22px 25px;
-    h3{
+
+    h3 {
         color: white;
         font-family: 'Shrikhand', cursive;
         font-size: 18px;
         margin: 0;
     }
-    ul{
+
+    ul {
         display: flex;
         flex-direction: column;
         font-family: 'Roboto-light';
         padding: 0;
         gap: 8px;
-        li{
+
+        li {
             list-style-type: none;
-            a{
+
+            a {
                 text-decoration: none;
                 color: white;
             }
         }
-        .ico-ustensils{
+
+        .ico-ustensils {
             font-family: 'Roboto';
         }
-        .ico-ustensils::before{
+
+        .ico-ustensils::before {
             font-family: 'Font-awesome-solid';
             content: "\f2e7";
             padding-right: 10px;
             font-size: 15px;
         }
-        .ico-handshake-angle{
+
+        .ico-handshake-angle {
             font-family: 'Roboto';
         }
-        .ico-handshake-angle::before{
+
+        .ico-handshake-angle::before {
             font-family: 'Font-awesome-solid';
             content: "\f4c4";
             padding-right: 10px;

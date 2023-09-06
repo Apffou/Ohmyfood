@@ -99,7 +99,7 @@ header .localisation span::before {
   margin: 31px 0px 57px 0px;
 }
 
-/*** section functioning ***/
+/*******        section functioning    ********/
 .section-fonctionning {
   background-color: white;
   display: flex;
@@ -159,22 +159,6 @@ header .localisation span::before {
   font-size: 17px;
 }
 
-/** 
-
-position: absolute;
-    content: "2";
-    color: white;
-    background-color: violet;
-     display: inline-block; 
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    left: -12px;
-    line-height: 24px;
-    font-size: 20px;
-    text-align: center;
-
-***/
 /*** section restaurants ***/
 .section-restaurants {
   display: flex;
@@ -184,12 +168,49 @@ position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 18px 0 18px;
 }
 .section-restaurants .restaurants-contents .card {
-  width: 95%;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px 15px 0 0;
 }
-.section-restaurants .restaurants-contents .card img {
-  width: 340px;
+.section-restaurants .restaurants-contents .card .card-first-section {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+.section-restaurants .restaurants-contents .card .card-first-section img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.section-restaurants .restaurants-contents .card .card-first-section .label {
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  font-family: "Roboto";
+  line-height: 29px;
+  text-align: center;
+  position: absolute;
+  top: 13px;
+  right: 12px;
+}
+.section-restaurants .restaurants-contents .card .card-second-section {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: #000000;
+}
+.section-restaurants .restaurants-contents .card .card-second-section h3 {
+  font-family: "Roboto-bold";
+  margin: 16px 0 8px 0;
+}
+.section-restaurants .restaurants-contents .card .card-second-section p {
+  font-family: "Roboto-light";
+  font-size: 17px;
+  margin-top: 0;
 }
 
 /*** Footer ***/
