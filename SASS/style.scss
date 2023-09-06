@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 
 /*** Fonts ***/
@@ -45,7 +45,7 @@
 
 @mixin cards {
     background-color: white;
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 15px 15px;
 }
 
 
@@ -54,12 +54,13 @@
 
 body {
     margin: 0;
-    background-color: $background-color;
+    background-color: $backgroundcolor;
 }
 
 h2 {
     font-family: 'Roboto-bold';
     padding-left: 18px;
+    margin: 0;
 }
 
 /*** Header ***/
@@ -141,16 +142,18 @@ header {
     background-color: white;
     display: flex;
     flex-direction: column;
+    padding: 48px 0 68px 0;
 
     .cards-fonctionning-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 25px;
+        margin-top: 30px;
 
         .cards-fonctionning {
             width: 75%;
-            background-color: $background-color;
+            background-color: $backgroundcolor;
             border-radius: 20px;
             font-family: 'Roboto';
             padding: 28px 0 28px 34px;
@@ -214,6 +217,12 @@ header {
 .section-restaurants {
     display: flex;
     flex-direction: column;
+    gap: 18px;
+    padding-top:49px;
+
+    h2{
+        padding-bottom: 7px;
+    }
 
     .restaurants-contents {
         display: flex;
@@ -229,10 +238,14 @@ header {
                 text-decoration: none;
                 display: inline-block;
                 position: relative;
+                width: 100%;
 
                 img{
                     width: 100%;
+                    max-height: 175px;
                     border-radius: 15px 15px 0 0;
+                    object-fit: cover;
+                    
                 }
 
                 .label{
@@ -253,8 +266,10 @@ header {
             .card-second-section{
                 display: flex;
                 flex-direction: row;
+                justify-content: space-between;
                 text-decoration: none;
                 color: $black;
+                padding: 0 0 0 16px;
 
                 h3{
                     font-family: 'Roboto-bold';
@@ -265,6 +280,10 @@ header {
                     font-family: 'Roboto-light';
                     font-size: 17px;
                     margin-top: 0;
+                }
+
+                .heart{
+color: $first-color;
                 }
             }
 
@@ -282,6 +301,7 @@ footer {
     background-color: $black-grey;
     color: white;
     padding: 22px 25px 22px 25px;
+    margin-top: 60px;
 
     h3 {
         color: white;
