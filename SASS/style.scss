@@ -1,10 +1,9 @@
 @import "variables";
 
-
 /*** Fonts ***/
 
 @font-face {
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Shrikhand';
     src: url(../assets/fonts/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
 }
 
@@ -41,6 +40,12 @@
     color: white;
     text-decoration: none;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+    transition: 300ms;
+}
+
+@mixin btn-cta-hoover {
+    opacity: 90%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
 }
 
 @mixin cards {
@@ -121,7 +126,7 @@ header {
         font-family: 'Roboto-light';
         font-size: 18px;
         text-align: center;
-        margin-top: 21px;
+        margin:21px 0 0 0;
 
     }
 
@@ -130,8 +135,15 @@ header {
         background: linear-gradient($second-color, $first-color);
         @include btn-cta;
         margin: 31px 0px 57px 0px;
+
+
+        &:hover{
+            @include btn-cta-hoover;
+        }
+        }
     }
-}
+    
+
 
 
 
