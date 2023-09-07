@@ -1,0 +1,141 @@
+@import "variables";
+
+/*** Fonts ***/
+
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url(../assets/fonts/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-light';
+    src:
+        url(../assets/fonts/Roboto/Roboto-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-bold';
+    font-weight: 700;
+    src: url(../assets/fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Font-awesome-solid';
+    src: url(../assets/fonts/fontawesome/fa-solid-900.woff2) format('woff2'),
+        url(../assets/fonts/fontawesome/fa-solid-900.ttf) format('truetype');
+}
+
+
+/*** Général ***/
+
+
+body {
+    margin: 0;
+    background-color: $backgroundcolor;
+}
+
+
+/* HEADER */
+
+
+header {
+    height: 63px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        width: 100%;
+
+        .link-back{
+            display: inline-block;
+            padding-left: 23px;
+            text-decoration: none;
+            color: $black-grey;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-img{
+            position: absolute;
+            top: 19px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        img {
+            width: 162px;
+            height: auto;
+        }
+    }
+}
+
+
+/*** Section menu ***/
+
+
+/*** Footer ***/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $black-grey;
+    color: white;
+    padding: 22px 25px 22px 25px;
+    margin-top: 60px;
+
+    h3 {
+        color: white;
+        font-family: 'Shrikhand', cursive;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Roboto-light';
+        padding: 0;
+        gap: 8px;
+
+        li {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .ico-ustensils {
+            font-family: 'Roboto';
+        }
+
+        .ico-ustensils::before {
+            font-family: 'Font-awesome-solid';
+            content: "\f2e7";
+            padding-right: 10px;
+            font-size: 15px;
+        }
+
+        .ico-handshake-angle {
+            font-family: 'Roboto';
+        }
+
+        .ico-handshake-angle::before {
+            font-family: 'Font-awesome-solid';
+            content: "\f4c4";
+            padding-right: 10px;
+            font-size: 11px;
+        }
+    }
+
+}
