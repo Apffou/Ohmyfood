@@ -22,6 +22,10 @@
   font-family: "Font-awesome-solid";
   src: url(../assets/fonts/fontawesome/fa-solid-900.woff2) format("woff2"), url(../assets/fonts/fontawesome/fa-solid-900.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Font-regular";
+  src: url(../assets/fonts/fontawesome/fa-regular-400.woff2) format("woff2");
+}
 /*** mixin ***/
 /*** Général ***/
 body {
@@ -281,4 +285,25 @@ footer ul .ico-handshake-angle::before {
   content: "\f4c4";
   padding-right: 10px;
   font-size: 11px;
+}
+
+.heart::after {
+  font-family: "Font-regular";
+  content: "\f004";
+  color: black;
+  font-size: 22px;
+  height: 10px;
+  transition: background 0.2s ease-out;
+  -webkit-background-clip: text;
+}
+
+.heart:hover:after {
+  font-family: "Font-awesome-solid";
+  content: "\f004";
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  white-space: nowrap;
 }/*# sourceMappingURL=style.css.map */
