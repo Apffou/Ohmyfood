@@ -1,36 +1,6 @@
-@import "variables";
+@use "variables";
+@use "fonts";
 
-/*** Fonts ***/
-
-
-@font-face {
-    font-family: 'Shrikhand';
-    src: url(../assets/fonts/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Roboto-light';
-    src:
-        url(../assets/fonts/Roboto/Roboto-Light.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url(../assets/fonts/Roboto/Roboto-Medium.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Roboto-bold';
-    font-weight: 700;
-    src: url(../assets/fonts/Roboto/Roboto-Bold.ttf) format('truetype');
-}
-
-
-@font-face {
-    font-family: 'Font-awesome-solid';
-    src: url(../assets/fonts/fontawesome/fa-solid-900.woff2) format('woff2'),
-        url(../assets/fonts/fontawesome/fa-solid-900.ttf) format('truetype');
-}
 
 /** MIXIN **/
 
@@ -44,7 +14,7 @@
 
 body {
     margin: 0;
-    background-color: $backgroundcolor;
+    background-color: variables.$backgroundcolor;
 }
 
 h1{
@@ -84,7 +54,7 @@ header {
             display: inline-block;
             padding-left: 23px;
             text-decoration: none;
-            color: $black-grey;
+            color: variables.$black-grey;
             position: relative;
             z-index: 1;
         }
@@ -118,7 +88,7 @@ header {
     position: absolute;
     width: 100%;
     top: 283px;
-    background-color: $backgroundcolor;
+    background-color: variables.$backgroundcolor;
     border-radius: 27px 27px 0 0;
 
 }
@@ -140,7 +110,7 @@ article{
 footer {
     display: flex;
     flex-direction: column;
-    background-color: $black-grey;
+    background-color: variables.$black-grey;
     color: white;
     padding: 22px 25px 22px 25px;
     margin-top: 60px;

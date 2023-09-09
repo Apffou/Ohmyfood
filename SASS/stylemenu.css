@@ -22,6 +22,10 @@
   font-family: "Font-awesome-solid";
   src: url(../assets/fonts/fontawesome/fa-solid-900.woff2) format("woff2"), url(../assets/fonts/fontawesome/fa-solid-900.ttf) format("truetype");
 }
+@font-face {
+  font-family: "Font-regular";
+  src: url(../assets/fonts/fontawesome/fa-regular-400.woff2) format("woff2");
+}
 /** MIXIN **/
 /*** Général ***/
 body {

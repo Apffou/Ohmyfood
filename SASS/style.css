@@ -94,19 +94,19 @@ header .localisation span::before {
 }
 .section-presentation a {
   display: inline-block;
-  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  background: linear-gradient(359deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
   padding: 15px 19px;
   font-family: "Roboto";
   color: white;
   text-decoration: none;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: 300ms;
   margin: 31px 0px 57px 0px;
 }
 .section-presentation a:hover {
   opacity: 90%;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.8));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
 }
 
 /*******        section functioning    ********/
@@ -236,7 +236,24 @@ header .localisation span::before {
   margin-top: 0;
 }
 .section-restaurants .restaurants-contents .card .card-second-section .heart {
-  color: rgb(147, 86, 220);
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.section-restaurants .restaurants-contents .card .card-second-section .heart::after {
+  font-family: "Font-regular";
+  content: "\f004";
+  color: black;
+  font-size: 22px;
+  transition: background 0.2s ease-out;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.section-restaurants .restaurants-contents .card .card-second-section .heart:hover::after {
+  font-family: "Font-awesome-solid";
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 /*** Footer ***/
@@ -285,25 +302,4 @@ footer ul .ico-handshake-angle::before {
   content: "\f4c4";
   padding-right: 10px;
   font-size: 11px;
-}
-
-.heart::after {
-  font-family: "Font-regular";
-  content: "\f004";
-  color: black;
-  font-size: 22px;
-  height: 10px;
-  transition: background 0.2s ease-out;
-  -webkit-background-clip: text;
-}
-
-.heart:hover:after {
-  font-family: "Font-awesome-solid";
-  content: "\f004";
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  background-repeat: no-repeat;
-  white-space: nowrap;
 }/*# sourceMappingURL=style.css.map */
