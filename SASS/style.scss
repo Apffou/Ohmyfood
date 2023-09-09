@@ -39,6 +39,13 @@ h2 {
     margin: 0;
 }
 
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+}
+
 /*** Header ***/
 
 header {
@@ -278,7 +285,7 @@ header {
                     
                       
                     }
-                    &:hover::after{
+                    &:checked::after{
                         font-family: 'Font-awesome-solid';
                         background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
                         color: transparent;
@@ -286,12 +293,14 @@ header {
                         background-clip: text;
                     }
                     }
+
             }
 
         }
     }
 
 }
+
 
 
 /*** Footer ***/
