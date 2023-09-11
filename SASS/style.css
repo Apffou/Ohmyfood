@@ -1,16 +1,18 @@
 @charset "UTF-8";
-/***  Variables  ***/
 /*** Fonts ***/
 @font-face {
   font-family: "Shrikhand";
   src: url(../assets/fonts/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
 }
+/** ROBOTO **/
 @font-face {
   font-family: "Roboto-light";
+  font-weight: 300;
   src: url(../assets/fonts/Roboto/Roboto-Light.ttf) format("truetype");
 }
 @font-face {
   font-family: "Roboto";
+  font-weight: 500;
   src: url(../assets/fonts/Roboto/Roboto-Medium.ttf) format("truetype");
 }
 @font-face {
@@ -19,6 +21,12 @@
   src: url(../assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
 }
 @font-face {
+  font-family: "Roboto-regular";
+  font-weight: 400;
+  src: url(../assets/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+/* FONT AWESOME */
+@font-face {
   font-family: "Font-awesome-solid";
   src: url(../assets/fonts/fontawesome/fa-solid-900.woff2) format("woff2"), url(../assets/fonts/fontawesome/fa-solid-900.ttf) format("truetype");
 }
@@ -26,6 +34,7 @@
   font-family: "Font-regular";
   src: url(../assets/fonts/fontawesome/fa-regular-400.woff2) format("woff2");
 }
+/***  Variables  ***/
 /*** mixin ***/
 /*** Général ***/
 body {
@@ -59,6 +68,8 @@ header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }
 header .logo img {
   width: 162px;
@@ -91,6 +102,7 @@ header .localisation span::before {
   font-family: "Roboto-bold";
   text-align: center;
   margin: 40px 0px 0px 0px;
+  padding: 0 50px 0 50px;
 }
 .section-presentation p {
   font-family: "Roboto-light";
@@ -135,7 +147,7 @@ header .localisation span::before {
   border-radius: 20px;
   font-family: "Roboto";
   padding: 28px 0 28px 34px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   /********         Icones circles   *******/
   /********         Icones fonctionnement     *******/
 }
@@ -223,6 +235,8 @@ header .localisation span::before {
   position: absolute;
   top: 13px;
   right: 12px;
+  font-size: 14px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .section-restaurants .restaurants-contents .card .card-second-section {
   display: flex;
@@ -250,7 +264,7 @@ header .localisation span::before {
   content: "\f004";
   color: black;
   font-size: 22px;
-  transition: background 0.2s ease-out;
+  transition: background 450ms ease-out;
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -271,11 +285,23 @@ footer {
   padding: 22px 25px 22px 25px;
   margin-top: 60px;
 }
+@media screen and (min-width: 767px) {
+  footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 25px 30px 25px 30px;
+  }
+}
 footer h3 {
   color: white;
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   margin: 0;
+}
+@media screen and (min-width: 767px) {
+  footer h3 {
+    margin-left: 16px;
+  }
 }
 footer ul {
   display: flex;
@@ -284,8 +310,21 @@ footer ul {
   padding: 0;
   gap: 8px;
 }
+@media screen and (min-width: 767px) {
+  footer ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+}
 footer ul li {
   list-style-type: none;
+}
+@media screen and (min-width: 767px) {
+  footer ul li {
+    min-width: 11%;
+  }
 }
 footer ul li a {
   text-decoration: none;
@@ -293,6 +332,11 @@ footer ul li a {
 }
 footer ul .ico-ustensils {
   font-family: "Roboto";
+}
+@media screen and (min-width: 767px) {
+  footer ul .ico-ustensils {
+    min-width: 16%;
+  }
 }
 footer ul .ico-ustensils::before {
   font-family: "Font-awesome-solid";
@@ -302,6 +346,11 @@ footer ul .ico-ustensils::before {
 }
 footer ul .ico-handshake-angle {
   font-family: "Roboto";
+}
+@media screen and (min-width: 767px) {
+  footer ul .ico-handshake-angle {
+    min-width: 16%;
+  }
 }
 footer ul .ico-handshake-angle::before {
   font-family: "Font-awesome-solid";

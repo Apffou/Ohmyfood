@@ -5,15 +5,21 @@
     src: url(../assets/fonts/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
 }
 
+/** ROBOTO **/
+
 @font-face {
     font-family: 'Roboto-light';
+    font-weight: 300;
     src:
         url(../assets/fonts/Roboto/Roboto-Light.ttf) format('truetype');
 }
 
+
 @font-face {
     font-family: 'Roboto';
+    font-weight: 500;
     src: url(../assets/fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+
 }
 
 @font-face {
@@ -22,6 +28,13 @@
     src: url(../assets/fonts/Roboto/Roboto-Bold.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'Roboto-regular';
+    font-weight: 400;
+    src: url(../assets/fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+
+/* FONT AWESOME */
 
 @font-face {
     font-family: 'Font-awesome-solid';
