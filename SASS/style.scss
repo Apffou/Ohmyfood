@@ -15,6 +15,10 @@ h2 {
     font-family: 'Roboto-bold';
     padding-left: 18px;
     margin: 0;
+
+    @media screen and (min-width:1440px){
+        padding: 0;
+    }
 }
 
 input[type=checkbox] {
@@ -116,12 +120,23 @@ header {
     flex-direction: column;
     padding: 48px 0 68px 0;
 
+    @media screen and (min-width:1440px){
+        padding: 50px 180px;
+        gap: 25px;
+    }
+
     .cards-fonctionning-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 25px;
         margin-top: 30px;
+
+        @media screen and (min-width:1440px){
+            flex-direction: row;
+            gap: 36px;
+            margin-top: 0;
+        }
 
         .cards-fonctionning {
             width: 75%;
@@ -130,6 +145,10 @@ header {
             font-family: 'Roboto';
             padding: 28px 0 28px 34px;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+            @media screen and (min-width:1440px){
+                width: 27%;
+            }
 
             /********         Icones circles   *******/
             &::before {
