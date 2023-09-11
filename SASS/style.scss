@@ -16,7 +16,7 @@ h2 {
     padding-left: 18px;
     margin: 0;
 
-    @media screen and (min-width:1440px){
+    @media screen and (min-width:1440px) {
         padding: 0;
     }
 }
@@ -84,13 +84,18 @@ header {
         text-align: center;
         margin: 40px 0px 0px 0px;
         padding: 0 50px 0 50px;
+
+        @media screen and (min-width:1440px) {
+            font-size: 40px;
+
+        }
     }
 
     p {
         font-family: 'Roboto-light';
         font-size: 18px;
         text-align: center;
-        margin:21px 0 0 0;
+        margin: 21px 0 0 0;
 
     }
 
@@ -101,12 +106,12 @@ header {
         margin: 31px 0px 57px 0px;
 
 
-        &:hover{
+        &:hover {
             @include mixins.btn-cta-hoover;
         }
-        }
     }
-    
+}
+
 
 
 
@@ -120,7 +125,7 @@ header {
     flex-direction: column;
     padding: 48px 0 68px 0;
 
-    @media screen and (min-width:1440px){
+    @media screen and (min-width:1440px) {
         padding: 50px 180px;
         gap: 25px;
     }
@@ -132,10 +137,11 @@ header {
         gap: 25px;
         margin-top: 30px;
 
-        @media screen and (min-width:1440px){
+        @media screen and (min-width:1440px) {
             flex-direction: row;
             gap: 36px;
             margin-top: 0;
+            justify-content: center;
         }
 
         .cards-fonctionning {
@@ -146,8 +152,8 @@ header {
             padding: 28px 0 28px 34px;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
-            @media screen and (min-width:1440px){
-                width: 27%;
+            @media screen and (min-width:1440px) {
+                min-width: 27%;
             }
 
             /********         Icones circles   *******/
@@ -209,9 +215,13 @@ header {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    padding-top:49px;
+    padding-top: 49px;
 
-    h2{
+    @media screen and (min-width:1440px) {
+        padding: 30px 180px;
+    }
+
+    h2 {
         padding-bottom: 7px;
     }
 
@@ -220,26 +230,41 @@ header {
         flex-direction: column;
         justify-content: center;
         padding: 0 18px 0 18px;
+        gap: 18px;
+
+        @media screen and (min-width:1440px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0;
+            gap: 50px 100px;
+        }
 
         .card {
             width: 100%;
             @include mixins.cards;
 
-            .card-first-section{
+            @media screen and (min-width:1440px) {
+                width: 45%;
+
+            }
+
+            .card-first-section {
                 text-decoration: none;
                 display: inline-block;
                 position: relative;
                 width: 100%;
 
-                img{
+                img {
                     width: 100%;
                     max-height: 175px;
                     border-radius: 15px 15px 0 0;
                     object-fit: cover;
-                    
+
                 }
 
-                .label{
+                .label {
                     width: 80px;
                     height: 29px;
                     background-color: variables.$green-light;
@@ -256,7 +281,7 @@ header {
                 }
             }
 
-            .card-second-section{
+            .card-second-section {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -264,20 +289,21 @@ header {
                 color: variables.$black;
                 padding: 0 0 0 16px;
 
-                h3{
+                h3 {
                     font-family: 'Roboto-bold';
                     margin: 16px 0 8px 0;
                 }
 
-                p{
+                p {
                     font-family: 'Roboto-light';
                     font-size: 17px;
                     margin-top: 0;
                 }
 
-                .heart{
+                .heart {
                     height: fit-content;
-                    &::after{
+
+                    &::after {
                         font-family: 'Font-regular';
                         content: '\f004';
                         color: black;
@@ -285,17 +311,18 @@ header {
                         transition: background 450ms ease-out;
                         -webkit-background-clip: text;
                         background-clip: text;
-                    
-                      
+
+
                     }
-                    &:checked::after{
+
+                    &:checked::after {
                         font-family: 'Font-awesome-solid';
                         background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
                         color: transparent;
                         -webkit-background-clip: text;
                         background-clip: text;
                     }
-                    }
+                }
 
             }
 
@@ -316,11 +343,11 @@ footer {
     padding: 22px 25px 22px 25px;
     margin-top: 60px;
 
-    @media screen and (min-width:767px){
+    @media screen and (min-width:767px) {
         flex-direction: row-reverse;
         align-items: center;
         padding: 25px 30px 25px 30px;
-        
+
     }
 
     h3 {
@@ -329,9 +356,9 @@ footer {
         font-size: 18px;
         margin: 0;
 
-        @media screen and (min-width:767px){
+        @media screen and (min-width:767px) {
             margin-left: 16px;
-            
+
         }
     }
 
@@ -342,17 +369,18 @@ footer {
         padding: 0;
         gap: 8px;
 
-        @media screen and (min-width:767px){
+        @media screen and (min-width:767px) {
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
             width: 100%;
-            
+
         }
+
         li {
             list-style-type: none;
 
-            @media screen and (min-width:767px){
+            @media screen and (min-width:767px) {
                 min-width: 11%;
             }
 
@@ -365,9 +393,9 @@ footer {
         .ico-ustensils {
             font-family: 'Roboto';
 
-            @media screen and (min-width:767px){
+            @media screen and (min-width:767px) {
                 min-width: 16%;
-                
+
             }
         }
 
@@ -381,9 +409,9 @@ footer {
         .ico-handshake-angle {
             font-family: 'Roboto';
 
-            @media screen and (min-width:767px){
+            @media screen and (min-width:767px) {
                 min-width: 16%;
-                
+
             }
         }
 
@@ -396,5 +424,3 @@ footer {
     }
 
 }
-
-

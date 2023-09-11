@@ -109,6 +109,11 @@ header .localisation span::before {
   margin: 40px 0px 0px 0px;
   padding: 0 50px 0 50px;
 }
+@media screen and (min-width: 1440px) {
+  .section-presentation h1 {
+    font-size: 40px;
+  }
+}
 .section-presentation p {
   font-family: "Roboto-light";
   font-size: 18px;
@@ -120,7 +125,7 @@ header .localisation span::before {
   background: linear-gradient(359deg, #9356DC -11.44%, #FF79DA 123.93%);
   border-radius: 25px;
   padding: 15px 19px;
-  font-family: "Roboto";
+  font-family: "Roboto-regular";
   color: white;
   text-decoration: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -157,6 +162,7 @@ header .localisation span::before {
     flex-direction: row;
     gap: 36px;
     margin-top: 0;
+    justify-content: center;
   }
 }
 .section-fonctionning .cards-fonctionning-content .cards-fonctionning {
@@ -171,7 +177,7 @@ header .localisation span::before {
 }
 @media screen and (min-width: 1440px) {
   .section-fonctionning .cards-fonctionning-content .cards-fonctionning {
-    width: 27%;
+    min-width: 27%;
   }
 }
 .section-fonctionning .cards-fonctionning-content .cards-fonctionning::before {
@@ -219,6 +225,11 @@ header .localisation span::before {
   gap: 18px;
   padding-top: 49px;
 }
+@media screen and (min-width: 1440px) {
+  .section-restaurants {
+    padding: 30px 180px;
+  }
+}
 .section-restaurants h2 {
   padding-bottom: 7px;
 }
@@ -227,11 +238,28 @@ header .localisation span::before {
   flex-direction: column;
   justify-content: center;
   padding: 0 18px 0 18px;
+  gap: 18px;
+}
+@media screen and (min-width: 1440px) {
+  .section-restaurants .restaurants-contents {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    gap: 50px 100px;
+  }
 }
 .section-restaurants .restaurants-contents .card {
   width: 100%;
   background-color: white;
   border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 1440px) {
+  .section-restaurants .restaurants-contents .card {
+    width: 45%;
+  }
 }
 .section-restaurants .restaurants-contents .card .card-first-section {
   text-decoration: none;
