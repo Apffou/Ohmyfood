@@ -157,10 +157,16 @@ header .logo img {
   font-size: 15px;
   margin: 0;
 }
+.menu-content .card-list .card__right-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
 .menu-content .card-list .card__right-content .card__price {
   color: #353535;
   font-family: "Roboto-bold";
   font-size: 15px;
+  margin: 0;
 }
 .menu-content .card-list .card__right-content .card__click {
   display: none;
