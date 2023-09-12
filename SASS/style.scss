@@ -289,6 +289,11 @@ header {
                 color: variables.$black;
                 padding: 0 0 0 16px;
 
+                a{
+                    text-decoration: none;
+                    color: variables.$black;
+                }
+
                 h3 {
                     font-family: 'Roboto-bold';
                     margin: 16px 0 8px 0;
@@ -329,6 +334,37 @@ header {
         }
     }
 
+}
+
+
+
+.heart2{
+    width: 21px;
+    height: 22px;
+.anim{
+    width: 21px;
+    overflow: visible;
+    cursor: pointer;
+}
+.anim path{
+    fill: url(#myGradient);
+    stroke: black;
+    stroke-width: 45px;
+}
+.anim stop {
+    transition: all 0.25s ease-in-out;
+}
+
+.anim path:hover{
+    stroke: transparent;
+}
+
+.anim:hover #myGradient stop:first-child{
+    stop-color:  #9356DC;
+}
+.anim:hover #myGradient stop:last-child{
+    stop-color: #FF79DA;
+}
 }
 
 
