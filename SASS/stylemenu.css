@@ -47,10 +47,6 @@ body {
   background-color: #F6F6F6;
 }
 
-main {
-  position: relative;
-}
-
 h1 {
   font-family: "Shrikhand";
   font-size: 28px;
@@ -117,37 +113,43 @@ header .logo img {
 }
 
 /*** Section menu ***/
-.menu-image {
+main .menu-image {
   width: 100%;
   height: 275px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.menu {
-  position: absolute;
+main .menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
   width: 100%;
-  top: 220px;
+  top: -55px;
   background-color: #F6F6F6;
   border-radius: 27px 27px 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
 }
-
-.menu-content {
+main .menu__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+}
+main .menu .menu-content {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 12px;
   padding: 0 13px 0 13px;
   margin: 0;
 }
-.menu-content .card-list {
+main .menu .menu-content .card-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.menu-content .card-list .card {
+main .menu .menu-content .card-list .card {
   background-color: white;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -157,34 +159,34 @@ header .logo img {
   padding: 15px;
   width: 100%;
 }
-.menu-content .card-list .card:hover .card__click {
+main .menu .menu-content .card-list .card:hover .card__click {
   display: flex;
   background-color: #99E2D0;
   width: 59px;
   opacity: 1;
 }
-.menu-content .card-list .card__left-content {
+main .menu .menu-content .card-list .card__left-content {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.menu-content .card-list .card__left-content .card__note {
+main .menu .menu-content .card-list .card__left-content .card__note {
   font-family: "Roboto-light";
   font-size: 15px;
   margin: 0;
 }
-.menu-content .card-list .card__right-content {
+main .menu .menu-content .card-list .card__right-content {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
 }
-.menu-content .card-list .card__right-content .card__price {
+main .menu .menu-content .card-list .card__right-content .card__price {
   color: #353535;
   font-family: "Roboto-bold";
   font-size: 15px;
   margin: 0;
 }
-.menu-content .card-list .card__right-content .card__click {
+main .menu .menu-content .card-list .card__right-content .card__click {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -197,6 +199,23 @@ header .logo img {
   background-color: white;
   opacity: 0;
 }
+main .btn__cta {
+  border-radius: 25px;
+  padding: 15px 19px;
+  font-family: "Roboto-regular";
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(359deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 300ms;
+  border-width: 0;
+  width: 186px;
+}
+main .btn__cta:hover {
+  opacity: 90%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
+}
 
 /*** Footer ***/
 footer {
@@ -206,6 +225,7 @@ footer {
   color: white;
   padding: 22px 25px 22px 25px;
   margin-top: 60px;
+  gap: 16px;
 }
 footer h3 {
   color: white;
