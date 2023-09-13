@@ -120,8 +120,37 @@ main {
         &__title {
             display: flex;
             flex-direction: row;
-            justify-content: start;
+            align-items: baseline;
             width: 100%;
+            gap: 24px;
+
+            .heart2{
+                width: 10%;
+            .anim{
+                width: 21px;
+                overflow: visible;
+                cursor: pointer;
+            }
+            .anim path{
+                fill: url(#myGradient);
+                stroke: black;
+                stroke-width: 45px;
+            }
+            .anim stop {
+                transition: all 0.25s ease-in-out;
+            }
+            
+            .anim path:hover{
+                stroke: transparent;
+            }
+            
+            .anim:hover #myGradient stop:first-child{
+                stop-color:  #9356DC;
+            }
+            .anim:hover #myGradient stop:last-child{
+                stop-color: #FF79DA;
+            }
+            }
         }
 
 

@@ -133,8 +133,34 @@ main .menu {
 main .menu__title {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  align-items: baseline;
   width: 100%;
+  gap: 24px;
+}
+main .menu__title .heart2 {
+  width: 10%;
+}
+main .menu__title .heart2 .anim {
+  width: 21px;
+  overflow: visible;
+  cursor: pointer;
+}
+main .menu__title .heart2 .anim path {
+  fill: url(#myGradient);
+  stroke: black;
+  stroke-width: 45px;
+}
+main .menu__title .heart2 .anim stop {
+  transition: all 0.25s ease-in-out;
+}
+main .menu__title .heart2 .anim path:hover {
+  stroke: transparent;
+}
+main .menu__title .heart2 .anim:hover #myGradient stop:first-child {
+  stop-color: #9356DC;
+}
+main .menu__title .heart2 .anim:hover #myGradient stop:last-child {
+  stop-color: #FF79DA;
 }
 main .menu .menu-content {
   display: flex;
