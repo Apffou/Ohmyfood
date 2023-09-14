@@ -112,10 +112,20 @@ main {
         flex-direction: column;
         align-items: center;
         gap: 40px;
-        width: 100%;
+
         top: -55px;
         background-color: variables.$backgroundcolor;
         border-radius: 27px 27px 0 0;
+
+        @media screen and (min-width:1024px){
+            margin: 0 96px;
+            
+        }
+
+        @media screen and (min-width:1440px){
+            margin: 0 192px;
+            
+        }
 
         &__title {
             display: flex;
@@ -142,7 +152,7 @@ main {
             
             .anim path:hover{
                 stroke: transparent;
-                transition: all 0.25s ease;
+                transition: all 0.25s ease-in-out;
             }
             
             .anim:hover #myGradient stop:first-child{
@@ -154,6 +164,17 @@ main {
             }
         }
 
+
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(359deg);
+              }
+            
+        }
 
 
 
@@ -174,16 +195,22 @@ main {
                 .card {
                     @include mixins.cards;
                     display: flex;
+                    position: relative;
                     flex-direction: row;
                     justify-content: space-between;
                     padding: 15px;
                     width: 100%;
+                    transition: padding 0.25s ease-in-out;
 
-                    &:hover .card__click {
-                        display: flex;
-                        background-color: variables.$green-light;
-                        width: 59px;
-                        opacity: 1;
+                    &:hover {
+                        padding-right: 32px;
+
+                        .card__click {
+                            display: flex;
+                            background-color: variables.$green-light;
+                            width: 59px;
+                            opacity: 1;
+                        }
                     }
 
                     &__left-content {
@@ -216,14 +243,28 @@ main {
                             flex-direction: row;
                             justify-content: center;
                             align-items: center;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
                             font-size: 20px;
                             width: 0;
                             height: 100%;
                             transition: 0.5s;
                             border-radius: 0 15px 15px 0;
-                            ;
                             background-color: white;
                             opacity: 0;
+
+                            i{
+                                color: white;
+                                display: inline-block;
+                                transition: 0.5s ease-in-out;
+
+                            }
+                            i:hover{
+                                color: red;
+                                rotate: 359deg;
+
+                            }
 
                         }
                     }

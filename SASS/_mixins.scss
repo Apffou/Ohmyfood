@@ -22,3 +22,88 @@
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
 }
+
+
+@mixin myGradient2 {
+    .anim{
+        width: 21px;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .anim path{
+        fill: url(#myGradient2);
+        stroke: black;
+        stroke-width: 32px;
+    }
+    .anim stop {
+        transition: all 0.25s ease-in-out;
+    }
+    
+    .anim path:hover{
+        stroke: transparent;
+        transition: all 0.25s ease-in-out;
+    }
+    
+    .anim:hover #myGradient2 stop:first-child{
+        stop-color:  #9356DC;
+    }
+    .anim:hover #myGradient2 stop:last-child{
+        stop-color: #FF79DA;
+    }
+}
+
+@mixin myGradient3 {
+    .anim{
+        width: 21px;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .anim path{
+        fill: url(#myGradient3);
+        stroke: black;
+        stroke-width: 32px;
+    }
+    .anim stop {
+        transition: all 0.25s ease-in-out;
+    }
+    
+    .anim path:hover{
+        stroke: transparent;
+        transition: all 0.25s ease-in-out;
+    }
+    
+    .anim:hover #myGradient3 stop:first-child{
+        stop-color:  #9356DC;
+    }
+    .anim:hover #myGradient3 stop:last-child{
+        stop-color: #FF79DA;
+    }
+}
+
+@mixin myGradient4 {
+    .anim{
+        width: 21px;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .anim path{
+        fill: url(#myGradient4);
+        stroke: black;
+        stroke-width: 32px;
+    }
+    .anim stop {
+        transition: all 0.25s ease-in-out;
+    }
+    
+    .anim path:hover{
+        stroke: transparent;
+        transition: all 0.25s ease-in-out;
+    }
+    
+    .anim:hover #myGradient4 stop:first-child{
+        stop-color:  #9356DC;
+    }
+    .anim:hover #myGradient4 stop:last-child{
+        stop-color: #FF79DA;
+    }
+}

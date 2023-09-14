@@ -231,12 +231,16 @@ header {
         padding: 0 18px 0 18px;
         gap: 18px;
 
-        @media screen and (min-width:1440px) {
+        @media screen and (min-width:1024px) {
             flex-direction: row;
             flex-wrap: wrap;
             width: 100%;
             box-sizing: border-box;
             padding: 0;
+            gap: 25px 50px;
+        }
+
+        @media screen and (min-width:1440px){
             gap: 50px 100px;
         }
 
@@ -244,7 +248,7 @@ header {
             width: 100%;
             @include mixins.cards;
 
-            @media screen and (min-width:1440px) {
+            @media screen and (min-width:1024px) {
                 width: 45%;
 
             }
@@ -303,31 +307,6 @@ header {
                     font-size: 17px;
                     margin-top: 0;
                 }
-
-                .heart {
-                    height: fit-content;
-
-                    &::after {
-                        font-family: 'Font-regular';
-                        content: '\f004';
-                        color: black;
-                        font-size: 22px;
-                        transition: background 450ms ease-out;
-                        -webkit-background-clip: text;
-                        background-clip: text;
-
-
-                    }
-
-                    &:checked::after {
-                        font-family: 'Font-awesome-solid';
-                        background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-                        color: transparent;
-                        -webkit-background-clip: text;
-                        background-clip: text;
-                    }
-                }
-
             }
 
         }
@@ -335,18 +314,21 @@ header {
 
 }
 
+/****************** Animation coeur  *****/
+
 .heart1{
     width: 21px;
     height: 22px;
+    padding: 23px 25px 33px 0;
     .anim{
         width: 21px;
         overflow: visible;
         cursor: pointer;
     }
     .anim path{
-        fill: url(#myGradient);
+        fill: url(#myGradient1);
         stroke: black;
-        stroke-width: 45px;
+        stroke-width: 32px;
     }
     .anim stop {
         transition: all 0.25s ease-in-out;
@@ -354,44 +336,38 @@ header {
     
     .anim path:hover{
         stroke: transparent;
+        transition: all 0.25s ease-in-out;
     }
     
-    .anim:hover #myGradient stop:first-child{
+    .anim:hover #myGradient1 stop:first-child{
         stop-color:  #9356DC;
     }
-    .anim:hover #myGradient stop:last-child{
+    .anim:hover #myGradient1 stop:last-child{
         stop-color: #FF79DA;
     }
 }
+
+
 .heart2{
     width: 21px;
     height: 22px;
-.anim{
+    padding: 23px 25px 33px 0;
+    @include mixins.myGradient2;
+}
+
+.heart3{
     width: 21px;
-    overflow: visible;
-    cursor: pointer;
-}
-.anim path{
-    fill: url(#myGradient);
-    stroke: black;
-    stroke-width: 45px;
-}
-.anim stop {
-    transition: all 0.25s ease-in-out;
+    height: 22px;
+    padding: 23px 25px 33px 0;
+    @include mixins.myGradient3;
 }
 
-.anim path:hover{
-    stroke: transparent;
+.heart4{
+    width: 21px;
+    height: 22px;
+    padding: 23px 25px 33px 0;
+    @include mixins.myGradient4;
 }
-
-.anim:hover #myGradient stop:first-child{
-    stop-color:  #9356DC;
-}
-.anim:hover #myGradient stop:last-child{
-    stop-color: #FF79DA;
-}
-}
-
 
 
 /*** Footer ***/
