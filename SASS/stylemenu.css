@@ -155,6 +155,7 @@ main .menu__title .heart2 .anim stop {
 }
 main .menu__title .heart2 .anim path:hover {
   stroke: transparent;
+  transition: all 0.25s ease;
 }
 main .menu__title .heart2 .anim:hover #myGradient stop:first-child {
   stop-color: #9356DC;
@@ -253,6 +254,14 @@ footer {
   margin-top: 60px;
   gap: 16px;
 }
+@media screen and (min-width: 767px) {
+  footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 25px 30px 25px 30px;
+    margin-top: 30px;
+  }
+}
 footer h3 {
   color: white;
   font-family: "Shrikhand", cursive;
@@ -266,8 +275,21 @@ footer ul {
   padding: 0;
   gap: 8px;
 }
+@media screen and (min-width: 767px) {
+  footer ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+}
 footer ul li {
   list-style-type: none;
+}
+@media screen and (min-width: 767px) {
+  footer ul li {
+    min-width: 11%;
+  }
 }
 footer ul li a {
   text-decoration: none;
@@ -275,6 +297,11 @@ footer ul li a {
 }
 footer ul .ico-ustensils {
   font-family: "Roboto";
+}
+@media screen and (min-width: 767px) {
+  footer ul .ico-ustensils {
+    min-width: 16%;
+  }
 }
 footer ul .ico-ustensils::before {
   font-family: "Font-awesome-solid";
@@ -284,6 +311,11 @@ footer ul .ico-ustensils::before {
 }
 footer ul .ico-handshake-angle {
   font-family: "Roboto";
+}
+@media screen and (min-width: 767px) {
+  footer ul .ico-handshake-angle {
+    min-width: 16%;
+  }
 }
 footer ul .ico-handshake-angle::before {
   font-family: "Font-awesome-solid";

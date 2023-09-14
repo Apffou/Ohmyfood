@@ -241,13 +241,18 @@ header .localisation span::before {
   padding: 0 18px 0 18px;
   gap: 18px;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .section-restaurants .restaurants-contents {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
     padding: 0;
+    gap: 25px 50px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-restaurants .restaurants-contents {
     gap: 50px 100px;
   }
 }
@@ -257,7 +262,7 @@ header .localisation span::before {
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .section-restaurants .restaurants-contents .card {
     width: 45%;
   }
@@ -311,30 +316,41 @@ header .localisation span::before {
   font-size: 17px;
   margin-top: 0;
 }
-.section-restaurants .restaurants-contents .card .card-second-section .heart {
-  height: -moz-fit-content;
-  height: fit-content;
+
+/****************** Animation coeur  *****/
+.heart1 {
+  width: 21px;
+  height: 22px;
+  padding: 23px 25px 33px 0;
 }
-.section-restaurants .restaurants-contents .card .card-second-section .heart::after {
-  font-family: "Font-regular";
-  content: "\f004";
-  color: black;
-  font-size: 22px;
-  transition: background 450ms ease-out;
-  -webkit-background-clip: text;
-  background-clip: text;
+.heart1 .anim {
+  width: 21px;
+  overflow: visible;
+  cursor: pointer;
 }
-.section-restaurants .restaurants-contents .card .card-second-section .heart:checked::after {
-  font-family: "Font-awesome-solid";
-  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+.heart1 .anim path {
+  fill: url(#myGradient1);
+  stroke: black;
+  stroke-width: 32px;
+}
+.heart1 .anim stop {
+  transition: all 0.25s ease-in-out;
+}
+.heart1 .anim path:hover {
+  stroke: transparent;
+  transition: all 0.25s ease-in-out;
+}
+.heart1 .anim:hover #myGradient1 stop:first-child {
+  stop-color: #9356DC;
+}
+.heart1 .anim:hover #myGradient1 stop:last-child {
+  stop-color: #FF79DA;
 }
 
 .heart2 {
   width: 21px;
   height: 22px;
+  padding: 23px 25px 33px 0;
 }
 .heart2 .anim {
   width: 21px;
@@ -342,20 +358,79 @@ header .localisation span::before {
   cursor: pointer;
 }
 .heart2 .anim path {
-  fill: url(#myGradient);
+  fill: url(#myGradient2);
   stroke: black;
-  stroke-width: 45px;
+  stroke-width: 32px;
 }
 .heart2 .anim stop {
   transition: all 0.25s ease-in-out;
 }
 .heart2 .anim path:hover {
   stroke: transparent;
+  transition: all 0.25s ease-in-out;
 }
-.heart2 .anim:hover #myGradient stop:first-child {
+.heart2 .anim:hover #myGradient2 stop:first-child {
   stop-color: #9356DC;
 }
-.heart2 .anim:hover #myGradient stop:last-child {
+.heart2 .anim:hover #myGradient2 stop:last-child {
+  stop-color: #FF79DA;
+}
+
+.heart3 {
+  width: 21px;
+  height: 22px;
+  padding: 23px 25px 33px 0;
+}
+.heart3 .anim {
+  width: 21px;
+  overflow: visible;
+  cursor: pointer;
+}
+.heart3 .anim path {
+  fill: url(#myGradient3);
+  stroke: black;
+  stroke-width: 32px;
+}
+.heart3 .anim stop {
+  transition: all 0.25s ease-in-out;
+}
+.heart3 .anim path:hover {
+  stroke: transparent;
+  transition: all 0.25s ease-in-out;
+}
+.heart3 .anim:hover #myGradient3 stop:first-child {
+  stop-color: #9356DC;
+}
+.heart3 .anim:hover #myGradient3 stop:last-child {
+  stop-color: #FF79DA;
+}
+
+.heart4 {
+  width: 21px;
+  height: 22px;
+  padding: 23px 25px 33px 0;
+}
+.heart4 .anim {
+  width: 21px;
+  overflow: visible;
+  cursor: pointer;
+}
+.heart4 .anim path {
+  fill: url(#myGradient4);
+  stroke: black;
+  stroke-width: 32px;
+}
+.heart4 .anim stop {
+  transition: all 0.25s ease-in-out;
+}
+.heart4 .anim path:hover {
+  stroke: transparent;
+  transition: all 0.25s ease-in-out;
+}
+.heart4 .anim:hover #myGradient4 stop:first-child {
+  stop-color: #9356DC;
+}
+.heart4 .anim:hover #myGradient4 stop:last-child {
   stop-color: #FF79DA;
 }
 
@@ -371,8 +446,9 @@ footer {
 @media screen and (min-width: 767px) {
   footer {
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: flex-end;
     padding: 25px 30px 25px 30px;
+    margin-top: 30px;
   }
 }
 footer h3 {
@@ -397,8 +473,8 @@ footer ul {
   footer ul {
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
     width: 100%;
+    margin: 30px 0 0 0;
   }
 }
 footer ul li {

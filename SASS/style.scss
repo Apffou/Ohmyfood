@@ -335,8 +335,34 @@ header {
 
 }
 
-
-
+.heart1{
+    width: 21px;
+    height: 22px;
+    .anim{
+        width: 21px;
+        overflow: visible;
+        cursor: pointer;
+    }
+    .anim path{
+        fill: url(#myGradient);
+        stroke: black;
+        stroke-width: 45px;
+    }
+    .anim stop {
+        transition: all 0.25s ease-in-out;
+    }
+    
+    .anim path:hover{
+        stroke: transparent;
+    }
+    
+    .anim:hover #myGradient stop:first-child{
+        stop-color:  #9356DC;
+    }
+    .anim:hover #myGradient stop:last-child{
+        stop-color: #FF79DA;
+    }
+}
 .heart2{
     width: 21px;
     height: 22px;
@@ -380,9 +406,9 @@ footer {
 
     @media screen and (min-width:767px) {
         flex-direction: row-reverse;
-        align-items: center;
+        align-items: flex-end;
         padding: 25px 30px 25px 30px;
-
+        margin-top: 30px;
     }
 
     h3 {
@@ -407,8 +433,8 @@ footer {
         @media screen and (min-width:767px) {
             flex-direction: row;
             justify-content: flex-end;
-            align-items: center;
             width: 100%;
+            margin: 30px 0 0 0;
 
         }
 

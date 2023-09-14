@@ -142,6 +142,7 @@ main {
             
             .anim path:hover{
                 stroke: transparent;
+                transition: all 0.25s ease;
             }
             
             .anim:hover #myGradient stop:first-child{
@@ -255,6 +256,13 @@ footer {
     margin-top: 60px;
     gap: 16px;
 
+    @media screen and (min-width:767px) {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 25px 30px 25px 30px;
+        margin-top: 30px;
+    }
+
     h3 {
         color: white;
         font-family: 'Shrikhand', cursive;
@@ -269,8 +277,19 @@ footer {
         padding: 0;
         gap: 8px;
 
+        @media screen and (min-width:767px) {
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 100%;
+            margin: 30px 0 0 0;
+        }
+
         li {
             list-style-type: none;
+
+            @media screen and (min-width:767px) {
+                min-width: 11%;
+            }
 
             a {
                 text-decoration: none;
@@ -280,6 +299,11 @@ footer {
 
         .ico-ustensils {
             font-family: 'Roboto';
+
+            @media screen and (min-width:767px) {
+                min-width: 16%;
+
+            }
         }
 
         .ico-ustensils::before {
@@ -291,6 +315,11 @@ footer {
 
         .ico-handshake-angle {
             font-family: 'Roboto';
+
+            @media screen and (min-width:767px) {
+                min-width: 16%;
+
+            }
         }
 
         .ico-handshake-angle::before {
