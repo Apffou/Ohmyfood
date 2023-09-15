@@ -10,7 +10,7 @@
     from{
         opacity: 0;
         animation-timing-function: ease-out;
-        transform: translateX(15px);
+        transform: translateX(-5%);
     }
 
     to{
@@ -60,6 +60,9 @@ h3 {
     font-family: 'Roboto';
     font-size: 18px;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 ul {
@@ -206,8 +209,7 @@ main {
                     transition: padding 0.25s ease-in-out;
 
                     &:hover {
-                        padding-right: 32px;
-
+                        padding-right: 75px;
 
                        .right-content .card__click {
                             display: flex;
@@ -216,9 +218,12 @@ main {
                             opacity: 1;
                             i{
                                 rotate: 359deg;
-    
                             }
+
+
                         }
+
+
 
                     }
 
@@ -226,11 +231,21 @@ main {
                         display: flex;
                         flex-direction: column;
                         gap: 5px;
+                        overflow: hidden;
+
+                        p{
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
 
                         .note {
                             font-family: 'Roboto-light';
                             font-size: 15px;
                             margin: 0;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
                     }
 
@@ -238,6 +253,7 @@ main {
                         display: flex;
                         flex-direction: row;
                         align-items: flex-end;
+                        padding-left: 15px;
 
                         .price {
                             color: variables.$black-grey;

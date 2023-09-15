@@ -41,7 +41,7 @@
   from {
     opacity: 0;
     animation-timing-function: ease-out;
-    transform: translateX(15px);
+    transform: translateX(-5%);
   }
   to {
     transform: translateX(0);
@@ -83,6 +83,9 @@ h3 {
   font-family: "Roboto";
   font-size: 18px;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ul {
@@ -210,7 +213,7 @@ main .menu .menu-content .card-list .card {
   transition: padding 0.25s ease-in-out;
 }
 main .menu .menu-content .card-list .card:hover {
-  padding-right: 32px;
+  padding-right: 75px;
 }
 main .menu .menu-content .card-list .card:hover .right-content .card__click {
   display: flex;
@@ -225,16 +228,26 @@ main .menu .menu-content .card-list .card .texts-wrapper {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  overflow: hidden;
+}
+main .menu .menu-content .card-list .card .texts-wrapper p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .menu .menu-content .card-list .card .texts-wrapper .note {
   font-family: "Roboto-light";
   font-size: 15px;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .menu .menu-content .card-list .card .right-content {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  padding-left: 15px;
 }
 main .menu .menu-content .card-list .card .right-content .price {
   color: #353535;
