@@ -6,6 +6,20 @@
 
 /** keyframes **/
 
+@keyframes menu-content {
+    from{
+        opacity: 0;
+        animation-timing-function: ease-out;
+        transform: translateX(15px);
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+
+}
 
 
 /*** Général ***/
@@ -166,18 +180,6 @@ main {
 
 
 
-        @keyframes rotation {
-            from {
-                transform: rotate(0deg);
-              }
-              to {
-                transform: rotate(359deg);
-              }
-            
-        }
-
-
-
         .menu-content {
             display: flex;
             flex-direction: column;
@@ -185,6 +187,7 @@ main {
             gap: 12px;
             padding: 0 13px 0 13px;
             margin: 0;
+            animation: 1000ms ease 0.25s 1 normal backwards running menu-content;
 
 
             .card-list {
@@ -205,33 +208,38 @@ main {
                     &:hover {
                         padding-right: 32px;
 
-                        .card__click {
+
+                       .right-content .card__click {
                             display: flex;
                             background-color: variables.$green-light;
                             width: 59px;
                             opacity: 1;
+                            i{
+                                rotate: 359deg;
+    
+                            }
                         }
+
                     }
 
-                    &__left-content {
+                    .texts-wrapper {
                         display: flex;
                         flex-direction: column;
                         gap: 5px;
 
-                        .card__note {
+                        .note {
                             font-family: 'Roboto-light';
                             font-size: 15px;
                             margin: 0;
                         }
-
                     }
 
-                    &__right-content {
+                    .right-content {
                         display: flex;
                         flex-direction: row;
                         align-items: flex-end;
 
-                        .card__price {
+                        .price {
                             color: variables.$black-grey;
                             font-family: 'Roboto-bold';
                             font-size: 15px;
@@ -251,21 +259,16 @@ main {
                             height: 100%;
                             transition: 0.5s;
                             border-radius: 0 15px 15px 0;
-                            background-color: white;
+                            background-color: variables.$white;
                             opacity: 0;
 
                             i{
-                                color: white;
+                                color: variables.$white;
                                 display: inline-block;
-                                transition: 0.5s ease-in-out;
+                                transition: all 0.5s ease-in-out;
+                                rotate: 0;
 
                             }
-                            i:hover{
-                                color: red;
-                                rotate: 359deg;
-
-                            }
-
                         }
                     }
                 }
@@ -292,7 +295,7 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: variables.$black-grey;
-    color: white;
+    color: variables.$white;
     padding: 22px 25px 22px 25px;
     margin-top: 60px;
     gap: 16px;
@@ -305,7 +308,7 @@ footer {
     }
 
     h3 {
-        color: white;
+        color: variables.$white;
         font-family: 'Shrikhand', cursive;
         font-size: 18px;
         margin: 0;
@@ -334,7 +337,7 @@ footer {
 
             a {
                 text-decoration: none;
-                color: white;
+                color: variables.$white;
             }
         }
 

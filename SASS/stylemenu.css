@@ -37,6 +37,17 @@
 }
 /*** mixin ***/
 /** keyframes **/
+@keyframes menu-content {
+  from {
+    opacity: 0;
+    animation-timing-function: ease-out;
+    transform: translateX(15px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 /*** Général ***/
 * {
   box-sizing: border-box;
@@ -172,14 +183,6 @@ main .menu__title .heart2 .anim:hover #myGradient stop:first-child {
 main .menu__title .heart2 .anim:hover #myGradient stop:last-child {
   stop-color: #FF79DA;
 }
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 main .menu .menu-content {
   display: flex;
   flex-direction: column;
@@ -187,6 +190,7 @@ main .menu .menu-content {
   gap: 12px;
   padding: 0 13px 0 13px;
   margin: 0;
+  animation: 1000ms ease 0.25s 1 normal backwards running menu-content;
 }
 main .menu .menu-content .card-list {
   display: flex;
@@ -208,34 +212,37 @@ main .menu .menu-content .card-list .card {
 main .menu .menu-content .card-list .card:hover {
   padding-right: 32px;
 }
-main .menu .menu-content .card-list .card:hover .card__click {
+main .menu .menu-content .card-list .card:hover .right-content .card__click {
   display: flex;
   background-color: #99E2D0;
   width: 59px;
   opacity: 1;
 }
-main .menu .menu-content .card-list .card__left-content {
+main .menu .menu-content .card-list .card:hover .right-content .card__click i {
+  rotate: 359deg;
+}
+main .menu .menu-content .card-list .card .texts-wrapper {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-main .menu .menu-content .card-list .card__left-content .card__note {
+main .menu .menu-content .card-list .card .texts-wrapper .note {
   font-family: "Roboto-light";
   font-size: 15px;
   margin: 0;
 }
-main .menu .menu-content .card-list .card__right-content {
+main .menu .menu-content .card-list .card .right-content {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
 }
-main .menu .menu-content .card-list .card__right-content .card__price {
+main .menu .menu-content .card-list .card .right-content .price {
   color: #353535;
   font-family: "Roboto-bold";
   font-size: 15px;
   margin: 0;
 }
-main .menu .menu-content .card-list .card__right-content .card__click {
+main .menu .menu-content .card-list .card .right-content .card__click {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -248,17 +255,14 @@ main .menu .menu-content .card-list .card__right-content .card__click {
   height: 100%;
   transition: 0.5s;
   border-radius: 0 15px 15px 0;
-  background-color: white;
+  background-color: #FFF;
   opacity: 0;
 }
-main .menu .menu-content .card-list .card__right-content .card__click i {
-  color: white;
+main .menu .menu-content .card-list .card .right-content .card__click i {
+  color: #FFF;
   display: inline-block;
-  transition: 0.5s ease-in-out;
-}
-main .menu .menu-content .card-list .card__right-content .card__click i:hover {
-  color: red;
-  rotate: 359deg;
+  transition: all 0.5s ease-in-out;
+  rotate: 0;
 }
 main .btn__cta {
   border-radius: 25px;
@@ -283,7 +287,7 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: #353535;
-  color: white;
+  color: #FFF;
   padding: 22px 25px 22px 25px;
   margin-top: 60px;
   gap: 16px;
@@ -297,7 +301,7 @@ footer {
   }
 }
 footer h3 {
-  color: white;
+  color: #FFF;
   font-family: "Shrikhand", cursive;
   font-size: 18px;
   margin: 0;
@@ -327,7 +331,7 @@ footer ul li {
 }
 footer ul li a {
   text-decoration: none;
-  color: white;
+  color: #FFF;
 }
 footer ul .ico-ustensils {
   font-family: "Roboto";
