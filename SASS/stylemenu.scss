@@ -7,17 +7,17 @@
 /** keyframes **/
 
 @keyframes menu-content {
-    from{
+    from {
         opacity: 0;
         animation-timing-function: ease-out;
         transform: translateX(-5%);
     }
 
-    to{
+    to {
         transform: translateX(0);
         opacity: 1;
     }
-    
+
 
 }
 
@@ -31,6 +31,11 @@
 
 body {
     background-color: variables.$backgroundcolor;
+
+    @media screen  and (min-width:1024px){
+        background-color: variables.$white;
+        
+    }
 }
 
 
@@ -60,9 +65,7 @@ h3 {
     font-family: 'Roboto';
     font-size: 18px;
     margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
 }
 
 ul {
@@ -134,15 +137,19 @@ main {
         background-color: variables.$backgroundcolor;
         border-radius: 27px 27px 0 0;
 
-        @media screen and (min-width:1024px){
+        @media screen and (min-width:1024px) {
             margin: 0 96px;
-            
+
         }
 
-        @media screen and (min-width:1440px){
+        @media screen and (min-width:1440px) {
             margin: 0 192px;
+            padding: 0 210px 0 210px;
             
+
         }
+
+
 
         &__title {
             display: flex;
@@ -151,33 +158,42 @@ main {
             width: 100%;
             gap: 24px;
 
-            .heart2{
+            @media screen and (min-width:1440px) {
+                justify-content: center;
+
+            }
+
+            .heart2 {
                 width: 10%;
-            .anim{
-                width: 21px;
-                overflow: visible;
-                cursor: pointer;
-            }
-            .anim path{
-                fill: url(#myGradient);
-                stroke: black;
-                stroke-width: 45px;
-            }
-            .anim stop {
-                transition: all 0.25s ease-in-out;
-            }
-            
-            .anim path:hover{
-                stroke: transparent;
-                transition: all 0.25s ease-in-out;
-            }
-            
-            .anim:hover #myGradient stop:first-child{
-                stop-color:  #9356DC;
-            }
-            .anim:hover #myGradient stop:last-child{
-                stop-color: #FF79DA;
-            }
+
+                .anim {
+                    width: 21px;
+                    overflow: visible;
+                    cursor: pointer;
+                }
+
+                .anim path {
+                    fill: url(#myGradient);
+                    stroke: black;
+                    stroke-width: 45px;
+                }
+
+                .anim stop {
+                    transition: all 0.25s ease-in-out;
+                }
+
+                .anim path:hover {
+                    stroke: transparent;
+                    transition: all 0.25s ease-in-out;
+                }
+
+                .anim:hover #myGradient stop:first-child {
+                    stop-color: #9356DC;
+                }
+
+                .anim:hover #myGradient stop:last-child {
+                    stop-color: #FF79DA;
+                }
             }
         }
 
@@ -211,20 +227,18 @@ main {
                     &:hover {
                         padding-right: 75px;
 
-                       .right-content .card__click {
+                        .right-content .card__click {
                             display: flex;
                             background-color: variables.$green-light;
                             width: 59px;
                             opacity: 1;
-                            i{
+
+                            i {
                                 rotate: 359deg;
                             }
 
 
                         }
-
-
-
                     }
 
                     .texts-wrapper {
@@ -233,7 +247,7 @@ main {
                         gap: 5px;
                         overflow: hidden;
 
-                        p{
+                        h3 {
                             white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis;
@@ -278,7 +292,7 @@ main {
                             background-color: variables.$white;
                             opacity: 0;
 
-                            i{
+                            i {
                                 color: variables.$white;
                                 display: inline-block;
                                 transition: all 0.5s ease-in-out;

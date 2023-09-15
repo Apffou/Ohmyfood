@@ -57,6 +57,11 @@
 body {
   background-color: #F6F6F6;
 }
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: #FFF;
+  }
+}
 
 h1 {
   font-family: "Shrikhand";
@@ -83,9 +88,6 @@ h3 {
   font-family: "Roboto";
   font-size: 18px;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 ul {
@@ -151,6 +153,7 @@ main .menu {
 @media screen and (min-width: 1440px) {
   main .menu {
     margin: 0 192px;
+    padding: 0 210px 0 210px;
   }
 }
 main .menu__title {
@@ -159,6 +162,11 @@ main .menu__title {
   align-items: baseline;
   width: 100%;
   gap: 24px;
+}
+@media screen and (min-width: 1440px) {
+  main .menu__title {
+    justify-content: center;
+  }
 }
 main .menu__title .heart2 {
   width: 10%;
@@ -230,7 +238,7 @@ main .menu .menu-content .card-list .card .texts-wrapper {
   gap: 5px;
   overflow: hidden;
 }
-main .menu .menu-content .card-list .card .texts-wrapper p {
+main .menu .menu-content .card-list .card .texts-wrapper h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
