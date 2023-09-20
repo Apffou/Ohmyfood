@@ -1,25 +1,9 @@
 @use "variables";
 @use "fonts";
 @use "mixins";
+@use "keyframes"
 
 
-
-/** keyframes **/
-
-@keyframes menu-content {
-    from {
-        opacity: 0;
-        animation-timing-function: ease-out;
-        transform: translateX(-5%);
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-
-}
 
 
 /*** Général ***/
@@ -118,6 +102,8 @@ header {
 
 /*** Section menu ***/
 
+
+
 main {
 
     .menu-image {
@@ -206,7 +192,7 @@ main {
             gap: 12px;
             padding: 0 13px 0 13px;
             margin: 0;
-            animation: 1000ms ease 0.25s 1 normal backwards running menu-content;
+
 
 
             .card-list {
@@ -315,6 +301,20 @@ main {
             @include mixins.btn-cta-hoover;
         }
     }
+}
+
+/***     Animation Menu content "apparition entrée plat dessert"   ***/
+
+.starter{
+    animation: 1000ms ease-in-out 0.25s 1 normal backwards running menu-content;
+}
+
+.dish{
+    animation: 1000ms ease-in-out 0.50s 1 normal backwards running menu-content;
+}
+
+.dessert{
+    animation: 1000ms ease-in-out 0.75s 1 normal backwards running menu-content;
 }
 
 

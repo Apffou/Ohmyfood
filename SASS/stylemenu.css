@@ -201,7 +201,6 @@ main .menu .menu-content {
   gap: 12px;
   padding: 0 13px 0 13px;
   margin: 0;
-  animation: 1000ms ease 0.25s 1 normal backwards running menu-content;
 }
 main .menu .menu-content .card-list {
   display: flex;
@@ -301,6 +300,19 @@ main .btn__cta {
 main .btn__cta:hover {
   opacity: 90%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
+}
+
+/***     Animation Menu content "apparition entrée plat dessert"   ***/
+.starter {
+  animation: 1000ms ease-in-out 0.25s 1 normal backwards running menu-content;
+}
+
+.dish {
+  animation: 1000ms ease-in-out 0.5s 1 normal backwards running menu-content;
+}
+
+.dessert {
+  animation: 1000ms ease-in-out 0.75s 1 normal backwards running menu-content;
 }
 
 /*** Footer ***/
