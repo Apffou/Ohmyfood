@@ -36,6 +36,38 @@
 }
 /***  Variables  ***/
 /*** mixin ***/
+@keyframes menu-content {
+  from {
+    opacity: 0;
+    animation-timing-function: ease-out;
+    transform: translateX(-5%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes opacite {
+  0% {
+    opacity: 1;
+    background-color: white;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background-color: transparent;
+  }
+}
 /*** Général ***/
 body {
   margin: 0;
@@ -94,6 +126,24 @@ header .localisation span::before {
   font-family: "Font-awesome-solid";
   content: "\f3c5";
   padding-right: 17px;
+}
+
+/***  TEST ANIMATION LOADER ***/
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: opacite 5.5s linear 0s 1 normal none;
+  animation-timing-function: steps(1);
+}
+.loader i {
+  color: blue;
+  animation: spinner 1s linear 0.1s 5 normal none;
 }
 
 /*** section presentation ***/

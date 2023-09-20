@@ -1,0 +1,45 @@
+
+@keyframes menu-content {
+    from {
+        opacity: 0;
+        animation-timing-function: ease-out;
+        transform: translateX(-5%);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+
+}
+
+
+@keyframes spinner {
+
+
+    0% { transform: rotate(0deg); }
+  
+  
+    100% { transform: rotate(360deg); }
+  
+  
+  }
+
+
+  @keyframes opacite {
+
+    0%{
+        opacity: 1;
+        background-color: white;
+    }
+
+    99%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        background-color: transparent;
+    }
+  }
