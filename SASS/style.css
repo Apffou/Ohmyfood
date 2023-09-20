@@ -60,12 +60,13 @@
     opacity: 1;
     background-color: white;
   }
-  99% {
+  70% {
     opacity: 1;
   }
   100% {
     opacity: 0;
     background-color: transparent;
+    pointer-events: none;
   }
 }
 /*** Général ***/
@@ -138,12 +139,12 @@ header .localisation span::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: opacite 5.5s linear 0s 1 normal none;
+  animation: opacite 3s linear 0s 1 normal forwards;
   animation-timing-function: steps(1);
 }
 .loader i {
   color: blue;
-  animation: spinner 1s linear 0.1s 5 normal none;
+  animation: spinner 1s linear 0s 3 normal none;
 }
 
 /*** section presentation ***/

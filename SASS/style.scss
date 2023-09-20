@@ -84,12 +84,12 @@ color: white;
 display: flex;
 justify-content: center;
 align-items: center;
-animation: opacite 5.5s linear 0s 1 normal none;
+animation: opacite 3s linear 0s 1 normal forwards;
 animation-timing-function: steps(1);
 
     i{
         color: blue;
-        animation: spinner 1s linear 0.1s 5 normal none;
+        animation: spinner 1s linear 0s 3 normal none;
     }
 }
 

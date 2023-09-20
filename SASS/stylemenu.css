@@ -60,12 +60,13 @@
     opacity: 1;
     background-color: white;
   }
-  99% {
+  70% {
     opacity: 1;
   }
   100% {
     opacity: 0;
     background-color: transparent;
+    pointer-events: none;
   }
 }
 /*** Général ***/
