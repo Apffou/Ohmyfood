@@ -118,18 +118,19 @@ main {
         flex-direction: column;
         align-items: center;
         gap: 40px;
-
-        top: -55px;
+        margin-top: -55px;
         background-color: variables.$backgroundcolor;
         border-radius: 27px 27px 0 0;
 
         @media screen and (min-width:1024px) {
-            margin: 0 96px;
+            margin-right:96px;
+            margin-left:96px;
 
         }
 
         @media screen and (min-width:1440px) {
-            margin: 0 192px;
+            margin-right:192px;
+            margin-left:192px;
             padding: 0 210px 0 210px;
             
 
@@ -296,6 +297,7 @@ main {
         @include mixins.btn-cta;
         border-width: 0;
         width: 186px;
+        margin-bottom: 40px;
 
         &:hover {
             @include mixins.btn-cta-hoover;
@@ -327,14 +329,12 @@ footer {
     background-color: variables.$black-grey;
     color: variables.$white;
     padding: 22px 25px 22px 25px;
-    margin-top: 60px;
     gap: 16px;
 
     @media screen and (min-width:767px) {
         flex-direction: row-reverse;
         align-items: flex-end;
         padding: 25px 30px 25px 30px;
-        margin-top: 30px;
     }
 
     h3 {

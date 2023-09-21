@@ -22,12 +22,6 @@ h2 {
     }
 }
 
-input[type=checkbox] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-}
 
 /*** Header ***/
 
@@ -84,12 +78,15 @@ background-color: white;
 display: flex;
 justify-content: center;
 align-items: center;
-animation: opacite 2s linear 1s 1 normal forwards;
+animation: opacite 2700ms linear 1500ms 1 normal forwards;
 /** animation: name duration timing-function delay iteration-count direction fill-mode; **/
     i{
         color: variables.$first-color;
     }
 }
+
+
+
 
 /*** section presentation ***/
 

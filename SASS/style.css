@@ -52,7 +52,7 @@
     opacity: 1;
     background-color: white;
   }
-  65% {
+  70% {
     opacity: 1;
   }
   100% {
@@ -76,12 +76,6 @@ h2 {
   h2 {
     padding: 0;
   }
-}
-
-input[type=checkbox] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
 
 /*** Header ***/
@@ -131,7 +125,7 @@ header .localisation span::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: opacite 2s linear 1s 1 normal forwards;
+  animation: opacite 2700ms linear 1500ms 1 normal forwards;
   /** animation: name duration timing-function delay iteration-count direction fill-mode; **/
 }
 .loader i {

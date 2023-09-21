@@ -52,7 +52,7 @@
     opacity: 1;
     background-color: white;
   }
-  65% {
+  70% {
     opacity: 1;
   }
   100% {
@@ -154,18 +154,20 @@ main .menu {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  top: -55px;
+  margin-top: -55px;
   background-color: #F6F6F6;
   border-radius: 27px 27px 0 0;
 }
 @media screen and (min-width: 1024px) {
   main .menu {
-    margin: 0 96px;
+    margin-right: 96px;
+    margin-left: 96px;
   }
 }
 @media screen and (min-width: 1440px) {
   main .menu {
-    margin: 0 192px;
+    margin-right: 192px;
+    margin-left: 192px;
     padding: 0 210px 0 210px;
   }
 }
@@ -309,6 +311,7 @@ main .btn__cta {
   transition: 300ms;
   border-width: 0;
   width: 186px;
+  margin-bottom: 40px;
 }
 main .btn__cta:hover {
   opacity: 90%;
@@ -335,7 +338,6 @@ footer {
   background-color: #353535;
   color: #FFF;
   padding: 22px 25px 22px 25px;
-  margin-top: 60px;
   gap: 16px;
 }
 @media screen and (min-width: 767px) {
@@ -343,7 +345,6 @@ footer {
     flex-direction: row-reverse;
     align-items: flex-end;
     padding: 25px 30px 25px 30px;
-    margin-top: 30px;
   }
 }
 footer h3 {
