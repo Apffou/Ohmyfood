@@ -16,9 +16,9 @@
 body {
     background-color: variables.$backgroundcolor;
 
-    @media screen  and (min-width:1024px){
+    @media screen and (min-width:1024px) {
         background-color: variables.$white;
-        
+
     }
 }
 
@@ -123,16 +123,16 @@ main {
         border-radius: 27px 27px 0 0;
 
         @media screen and (min-width:1024px) {
-            margin-right:96px;
-            margin-left:96px;
+            margin-right: 96px;
+            margin-left: 96px;
 
         }
 
         @media screen and (min-width:1440px) {
-            margin-right:192px;
-            margin-left:192px;
+            margin-right: 192px;
+            margin-left: 192px;
             padding: 0 210px 0 210px;
-            
+
 
         }
 
@@ -307,15 +307,15 @@ main {
 
 /***     Animation Menu content "apparition entrée plat dessert"   ***/
 
-.starter{
+.starter {
     animation: 1000ms ease-in-out 0.25s 1 normal backwards running menu-content;
 }
 
-.dish{
+.dish {
     animation: 1000ms ease-in-out 0.50s 1 normal backwards running menu-content;
 }
 
-.dessert{
+.dessert {
     animation: 1000ms ease-in-out 0.75s 1 normal backwards running menu-content;
 }
 

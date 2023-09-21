@@ -36,6 +36,7 @@
   src: url(../assets/fonts/fontawesome/fa-regular-400.woff2) format("woff2");
 }
 /*** mixin ***/
+/** Heart animation + style**/
 @keyframes menu-content {
   from {
     opacity: 0;
@@ -50,10 +51,10 @@
 @keyframes opacite {
   0% {
     opacity: 1;
-    background-color: white;
   }
   70% {
     opacity: 1;
+    background-color: white;
   }
   100% {
     opacity: 0;

@@ -69,18 +69,18 @@ header {
 /***  TEST ANIMATION LOADER ***/
 
 
-.loader{
-position: absolute;
-width: 100%;
-height: 100%;
-z-index: 2;
-background-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-animation: opacite 2700ms linear 1500ms 1 normal forwards;
-/** animation: name duration timing-function delay iteration-count direction fill-mode; **/
-    i{
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: opacite 2700ms forwards;
+
+    i {
         color: variables.$first-color;
     }
 }
@@ -257,7 +257,7 @@ animation: opacite 2700ms linear 1500ms 1 normal forwards;
             gap: 25px 50px;
         }
 
-        @media screen and (min-width:1440px){
+        @media screen and (min-width:1440px) {
             gap: 50px 100px;
         }
 
@@ -309,7 +309,7 @@ animation: opacite 2700ms linear 1500ms 1 normal forwards;
                 color: variables.$black;
                 padding: 0 0 0 16px;
 
-                a{
+                a {
                     text-decoration: none;
                     color: variables.$black;
                 }
@@ -333,56 +333,52 @@ animation: opacite 2700ms linear 1500ms 1 normal forwards;
 
 /****************** Animation coeur  *****/
 
-.heart1{
-    width: 21px;
-    height: 22px;
-    padding: 23px 25px 33px 0;
-    .anim{
+.heart1 {
+    @include mixins.heart-box;
+
+    .anim {
         width: 21px;
         overflow: visible;
         cursor: pointer;
     }
-    .anim path{
+
+    .anim path {
         fill: url(#myGradient1);
         stroke: black;
         stroke-width: 32px;
     }
+
     .anim stop {
         transition: all 0.25s ease-in-out;
     }
-    
-    .anim path:hover{
+
+    .anim path:hover {
         stroke: transparent;
         transition: all 0.25s ease-in-out;
     }
-    
-    .anim:hover #myGradient1 stop:first-child{
-        stop-color:  #9356DC;
+
+    .anim:hover #myGradient1 stop:first-child {
+        stop-color: #9356DC;
     }
-    .anim:hover #myGradient1 stop:last-child{
+
+    .anim:hover #myGradient1 stop:last-child {
         stop-color: #FF79DA;
     }
 }
 
 
-.heart2{
-    width: 21px;
-    height: 22px;
-    padding: 23px 25px 33px 0;
+.heart2 {
+    @include mixins.heart-box;
     @include mixins.myGradient2;
 }
 
-.heart3{
-    width: 21px;
-    height: 22px;
-    padding: 23px 25px 33px 0;
+.heart3 {
+    @include mixins.heart-box;
     @include mixins.myGradient3;
 }
 
-.heart4{
-    width: 21px;
-    height: 22px;
-    padding: 23px 25px 33px 0;
+.heart4 {
+    @include mixins.heart-box;
     @include mixins.myGradient4;
 }
 

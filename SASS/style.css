@@ -36,6 +36,7 @@
 }
 /***  Variables  ***/
 /*** mixin ***/
+/** Heart animation + style**/
 @keyframes menu-content {
   from {
     opacity: 0;
@@ -50,10 +51,10 @@
 @keyframes opacite {
   0% {
     opacity: 1;
-    background-color: white;
   }
   70% {
     opacity: 1;
+    background-color: white;
   }
   100% {
     opacity: 0;
@@ -125,8 +126,7 @@ header .localisation span::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: opacite 2700ms linear 1500ms 1 normal forwards;
-  /** animation: name duration timing-function delay iteration-count direction fill-mode; **/
+  animation: opacite 2700ms forwards;
 }
 .loader i {
   color: #9356dc;
