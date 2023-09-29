@@ -217,10 +217,8 @@ main {
                             opacity: 1;
 
                             i {
-                                rotate: 359deg;
+                                transform: rotate(359deg);
                             }
-
-
                         }
                     }
 
@@ -279,7 +277,7 @@ main {
                                 color: variables.$white;
                                 display: inline-block;
                                 transition: all 0.5s ease-in-out;
-                                rotate: 0deg;
+                                transform: rotate(0deg);
                             }
                         }
                     }
