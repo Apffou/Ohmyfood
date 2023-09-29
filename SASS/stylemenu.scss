@@ -276,7 +276,7 @@ main {
                             i {
                                 color: variables.$white;
                                 display: inline-block;
-                                transition: all 0.5s ease-in-out;
+                                transition: 0.5s ease-in-out;
                                 transform: rotate(0deg);
                             }
                         }
