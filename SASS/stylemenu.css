@@ -62,7 +62,7 @@
     pointer-events: none;
   }
 }
-/*** Général ***/
+/***    Général    ***/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -112,7 +112,7 @@ li {
   list-style-type: none;
 }
 
-/* HEADER */
+/***    HEADER   ***/
 header {
   height: 63px;
   background-color: white;
@@ -184,9 +184,6 @@ main .menu__title {
     justify-content: center;
   }
 }
-main .menu__title .heart2 {
-  width: 10%;
-}
 main .menu__title .heart2 .anim {
   width: 21px;
   overflow: visible;
@@ -239,7 +236,6 @@ main .menu .menu-content .card-list .card:hover {
   padding-right: 75px;
 }
 main .menu .menu-content .card-list .card:hover .right-content .card__click {
-  display: flex;
   background-color: #99E2D0;
   width: 59px;
   opacity: 1;
@@ -298,7 +294,7 @@ main .menu .menu-content .card-list .card .right-content .card__click i {
   color: #FFF;
   display: inline-block;
   transition: all 0.5s ease-in-out;
-  rotate: 0;
+  rotate: 0deg;
 }
 main .btn__cta {
   border-radius: 25px;

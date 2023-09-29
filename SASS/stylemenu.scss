@@ -6,7 +6,7 @@
 
 
 
-/*** Général ***/
+/***    Général    ***/
 
 * {
     box-sizing: border-box;
@@ -63,7 +63,7 @@ li {
 
 
 
-/* HEADER */
+/***    HEADER   ***/
 
 
 header {
@@ -136,8 +136,6 @@ main {
 
         }
 
-
-
         &__title {
             display: flex;
             flex-direction: row;
@@ -151,7 +149,6 @@ main {
             }
 
             .heart2 {
-                width: 10%;
 
                 .anim {
                     width: 21px;
@@ -215,7 +212,6 @@ main {
                         padding-right: 75px;
 
                         .right-content .card__click {
-                            display: flex;
                             background-color: variables.$green-light;
                             width: 59px;
                             opacity: 1;
@@ -283,8 +279,7 @@ main {
                                 color: variables.$white;
                                 display: inline-block;
                                 transition: all 0.5s ease-in-out;
-                                rotate: 0;
-
+                                rotate: 0deg;
                             }
                         }
                     }
