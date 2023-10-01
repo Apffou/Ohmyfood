@@ -71,6 +71,8 @@ header {
 
 .loader {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -78,7 +80,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: opacite 2700ms forwards;
+    animation: fadeout 2700ms forwards;
 
     i {
         color: variables.$first-color;
@@ -346,15 +348,15 @@ header {
         fill: url(#myGradient1);
         stroke: black;
         stroke-width: 32px;
+        transition: stroke 0.25s ease-in-out;
     }
 
     .anim stop {
-        transition: all 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
     }
 
     .anim path:hover {
         stroke: transparent;
-        transition: all 0.25s ease-in-out;
     }
 
     .anim:hover #myGradient1 stop:first-child {

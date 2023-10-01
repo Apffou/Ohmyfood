@@ -366,13 +366,13 @@ header .localisation span::before {
   fill: url(#myGradient1);
   stroke: black;
   stroke-width: 32px;
+  transition: stroke 0.25s ease-in-out;
 }
 .heart1 .anim stop {
   transition: all 0.25s ease-in-out;
 }
 .heart1 .anim path:hover {
   stroke: transparent;
-  transition: all 0.25s ease-in-out;
 }
 .heart1 .anim:hover #myGradient1 stop:first-child {
   stop-color: #9356DC;
