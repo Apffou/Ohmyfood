@@ -48,7 +48,7 @@
     opacity: 1;
   }
 }
-@keyframes opacite {
+@keyframes fadeout {
   0% {
     opacity: 1;
   }
